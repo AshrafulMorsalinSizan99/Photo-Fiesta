@@ -1,0 +1,44 @@
+[
+    {
+        "service_id": "01",
+        "img": "https://cdn0.weddingwire.in/article/9086/3_2/960/jpg/16809-creative-wedding-photography-avinash-dhoundhiyal-photography-lead-image.jpeg",
+        "price": 30000,
+        "name": "Wedding Photography",
+        "description": "Everyone wants to keep their memorable day as a photo. If it is a wedding and engagement ceremony, then there is no space to talk about it.aFor wedding photography, there is must need for the best photographer and photography services. Because the wedding is the best part of life and we love it. "
+    },
+    {
+        "service_id": "02",
+        "img": "https://expertphotography.b-cdn.net/wp-content/uploads/2022/05/Sports-Photography-Jonathan-Chng.jpg",
+        "price": 10000,
+        "name": "Sports Photography",
+        "description": "Sports photography refers to the genre of photography that covers all types of sports. Sports photography is also used for advertising purposes both to build a brand and as well as to promote a sport in a way that cannot be accomplished by editorial means. "
+    },
+    {
+        "service_id": "03",
+        "img": "https://www.coe.int/documents/16695/11914058/20220317-.jpg/8044581b-60a3-0246-e245-0ee42a11546d?t=1647530280000",
+        "price": 12000,
+        "name": "Journalism Photography",
+        "description": "Journalism is the activity of gathering, assessing, creating, and presenting news and information. It is also the product of these activities.Gathering such info in photography is called journalism photography."
+    },
+    {
+        "service_id": "04",
+        "img": "https://images.pexels.com/photos/2055100/pexels-photo-2055100.jpeg?cs=srgb&dl=pexels-george-desipris-2055100.jpg&fm=jpg",
+        "price": 20000,
+        "name": "Wild Photography",
+        "description": "Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat. While wildlife photographs can be taken using basic equipment, successful photography of some types of wildlife requires specialist equipment, such as macro lenses for insects, long focal length lenses for birds and underwater cameras for marine life. However, a great wildlife photograph can involve a understanding of animal behavior. "
+    },
+    {
+        "service_id": "05",
+        "img": "https://shotkit.com/wp-content/uploads/2021/01/nature-photography.jpg",
+        "price": 15000,
+        "name": "Nature Photography",
+        "description": "Nature photography is a wide range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures. Nature photography tends to put a stronger emphasis on the aesthetic value of the photo than other photography genres, such as photojournalism and documentary photography. "
+    },
+    {
+        "service_id": "06",
+        "img": "https://www.peerspace.com/resources/wp-content/uploads/best-atlanta-event-photographers-1080x600.jpg",
+        "price": 25000,
+        "name": "Event Photography",
+        "description": "Event photography is the professional art of snapping high-quality images during a wide variety of important occasions.Typically, the goal for any event shoot is to compile a variety of posed and candid photographs of both people and scenery."
+    }
+]

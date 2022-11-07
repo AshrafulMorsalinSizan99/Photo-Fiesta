@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../About/About';
+import Services from '../Services/Services';
 import Banner from './Banner/Banner';
 import './Home.css';
 
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <About></About>
+            <Services></Services>
             <div
                 className="container rounded-3 d-flex justify-content-center align-items-center bg-info contact mb-5 " id="subscribe">
                 <div class="mt-5 mb-5">
