@@ -5,9 +5,9 @@ const Footer = () => {
         <footer className="footer p-32 bg-neutral text-neutral-content">
             <div>
                 <span className="footer-title">Services</span>
-                <a className="link link-hover" href="/">Branding</a>
-                <a className="link link-hover" href="/">Design</a>
-                <a className="link link-hover" href="/">Marketing</a>
+                <a className="link link-hover" href="/">Photography</a>
+                <a className="link link-hover" href="/">Cinematography</a>
+                <a className="link link-hover" href="/">Film Making</a>
                 <a className="link link-hover" href="/">Advertisement</a>
             </div>
             <div>
