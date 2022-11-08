@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-
+    const { user, logOut } = useContext(AuthContext);
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
+        {/* <li><Link to='/login'>Login</Link></li> */}
+
+        {
+            user?.uid ?
+                <li><button onClick={logOut}>Sign out</button>
+                </li>
+                :
+                <>
+                    <li><Link to='/login'>Login</Link></li>
+                    <li><Link to='/signup'>Sign Up</Link></li>
+                </>
+        }
+        <span className='mt-3'>{user?.displayName}</span>
     </>
     return (
         <div className="navbar h-20 mb-12 bg-base-100">
@@ -26,7 +40,13 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                {/* {
+                    user.photoURL ?
+                        <img style={{ height: '40px' }} roundedCircle src={user.photoURL}>
+                        :
+                        <></>
+                } */}
+
             </div>
         </div>
     );
