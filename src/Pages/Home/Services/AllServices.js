@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
-const Services = () => {
-    const [services, setServices] = useState([]);
+const AllServices = () => {
+    const [allServices, setAllServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/allServices')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => setAllServices(data))
     }, [])
     return (
         <div>
@@ -17,9 +17,9 @@ const Services = () => {
             <div className='grid gap-6 grid-cols-1 lg:grid-cols-3'>
 
                 {
-                    services.map(service => <ServiceCard
-                        key={service._id}
-                        service={service}
+                    allServices.map(allService => <ServiceCard
+                        key={allService._id}
+                        service={allService}
                     >
 
                     </ServiceCard>)
@@ -27,12 +27,12 @@ const Services = () => {
 
             </div>
             <div className='text-center mt-3'>
-                <Link to={'/services'}>
+                {/* <Link to={'/services'}>
                     <button className="btn btn-warning">View All</button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );
 };
 
-export default Services;
+export default AllServices;
