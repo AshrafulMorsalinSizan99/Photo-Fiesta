@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
 
@@ -31,6 +32,32 @@ const Reviews = () => {
         }
     }
 
+    // const handleUpdate = id => {
+    //     fetch(`http://localhost:5000/reviews/${id}`, {
+    //         method: 'PATCH',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify({ status: 'Approved' })
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             if (data.modifiedCount > 0) {
+    //                 const remaining = reviews.filter(rw => rw._id !== id);
+    //                 const approving = reviews.find(rw => rw._id === id);
+    //                 approving.status = 'Approved';
+
+    //                 const newReviews = [approving, ...remaining];
+    //                 setReviews(newReviews);
+    //             }
+    //         })
+    // }
+    const navigate = useNavigate();
+    const handleUpdate1 = (id) => {
+        navigate(`/reviews/edit/${id}`)
+    }
+
     return (
         <div>
             <h2 className="text-5xl text-center mb-5">You have {reviews.length} Reviews</h2>
@@ -52,6 +79,7 @@ const Reviews = () => {
                                 key={review1._id}
                                 review1={review1}
                                 handleDelete={handleDelete}
+                                handleUpdate1={handleUpdate1}
                             ></ReviewRow>)
                         }
                     </tbody>

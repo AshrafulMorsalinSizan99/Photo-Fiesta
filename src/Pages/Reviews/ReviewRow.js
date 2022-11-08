@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const ReviewRow = ({ review1, handleDelete }) => {
-    const { _id, serviceName, price, email, review, service } = review1;
+const ReviewRow = ({ review1, handleDelete, handleUpdate1 }) => {
+    const { _id, serviceName, price, email, review, service, status } = review1;
 
     const [reviewService, setReviewService] = useState({})
     useEffect(() => {
@@ -42,7 +42,8 @@ const ReviewRow = ({ review1, handleDelete }) => {
             </td>
             <td>Purple</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                {/* <button onClick={() => handleUpdate1(_id)} className="btn btn-ghost btn-xs">{status ? status : 'Pending'}</button> */}
+                <button onClick={() => handleUpdate1(_id)} className="btn btn-ghost btn-xs">Edit</button>
             </th>
         </tr>
     );
