@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PhotoProvider, PhotoConsumer, PhotoView } from "react-photo-view";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/index.css";
 
 const allServiceCard = ({ allService }) => {
@@ -21,11 +21,11 @@ const allServiceCard = ({ allService }) => {
         // </div>
         <div className="card lg:card-side bg-base-100 shadow-xl w-full">
             <PhotoProvider>
-                <div>
-                    <PhotoView src={img}>
-                        <img src={img} alt="" />
-                    </PhotoView>
-                </div>
+
+                <PhotoView src={img}>
+                    <img src={img} alt="" />
+                </PhotoView>
+
             </PhotoProvider>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
