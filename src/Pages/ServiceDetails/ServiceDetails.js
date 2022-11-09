@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import ReviewForm from '../ReviewForm/ReviewForm';
+import Reviews from '../Reviews/Reviews';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
@@ -25,7 +26,10 @@ const ServiceDetails = () => {
                 <h2 className='text-5xl text-blue-700'>Review Section</h2>
                 {
                     user?.uid ?
-                        <ReviewForm></ReviewForm>
+                        <>
+                            <Reviews></Reviews>
+                            <ReviewForm></ReviewForm>
+                        </>
                         :
                         <h2 className='text-3xl mt-4'>Please <Link to='/login'>Login</Link> to add a review</h2>
                 }

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ReviewForm = () => {
     const { user } = useContext(AuthContext);
@@ -32,7 +34,7 @@ const ReviewForm = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    alert('Review placed successfully')
+                    toast.success('Review placed successfully')
                     form.reset();
                 }
             })

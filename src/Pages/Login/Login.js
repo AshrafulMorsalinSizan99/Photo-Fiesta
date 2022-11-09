@@ -1,6 +1,6 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
@@ -8,6 +8,11 @@ const Login = () => {
 
     const { login, providerLogin } = useContext(AuthContext);
     const provider = new GoogleAuthProvider();
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -17,10 +22,28 @@ const Login = () => {
         login(email, password)
             .then(res => {
                 const user = res.user;
-                console.log(user);
+
+
+                const currentUser = {
+                    email: user?.email
+                }
+                console.log(currentUser);
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('photo-token', data.token);
+                    })
                 form.reset();
+                navigate(from, { replace: true })
             })
-            .then(err => console.error(err))
+            .catch(err => console.error(err))
     }
     const handleGoogleSignIn = () => {
         providerLogin(provider)
