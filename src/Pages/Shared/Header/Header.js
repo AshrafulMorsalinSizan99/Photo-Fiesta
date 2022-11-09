@@ -14,6 +14,7 @@ const Header = () => {
 
                 <>
                     <li><Link to='/reviews'>My Reviews</Link></li>
+                    <li><Link to='/addService'>Add Service</Link></li>
                     <li><button onClick={logOut}>Sign out</button>
                     </li>
                 </>
