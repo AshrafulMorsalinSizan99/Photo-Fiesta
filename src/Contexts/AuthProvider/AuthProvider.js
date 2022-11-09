@@ -15,11 +15,19 @@ const AuthProvider = ({ children }) => {
     }
 
     const createUser = (email, password) => {
-        setLoading(true);
+        // setLoading(true);
+        if (loading) {
+            // return <h1 className='text-5xl'>Loading...</h1>
+            return <button className="btn btn-square loading"></button>
+        }
         return createUserWithEmailAndPassword(auth, email, password);
     }
     const login = (email, password) => {
-        setLoading(true);
+        // setLoading(true);
+        if (loading) {
+            // return <h1 className='text-5xl'>Loading...</h1>
+            return <button className="btn btn-square loading"></button>
+        }
         return signInWithEmailAndPassword(auth, email, password);
     }
     const logOut = () => {

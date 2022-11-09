@@ -1,10 +1,12 @@
 import React from 'react';
+import useTitle from '../../../hooks/useTitle';
 import About from '../About/About';
 import Services from '../Services/Services';
 import Banner from './Banner/Banner';
 import './Home.css';
 
 const Home = () => {
+    useTitle('')
     return (
         <div>
             <Banner></Banner>
