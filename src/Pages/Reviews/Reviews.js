@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Reviews = () => {
     const { user } = useContext(AuthContext);
@@ -24,7 +26,7 @@ const Reviews = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('Deleted successfully');
+                        toast.success('Deleted successfully');
                         const remaining = reviews.filter(rw => rw._id !== id);
                         setReviews(remaining);
                     }

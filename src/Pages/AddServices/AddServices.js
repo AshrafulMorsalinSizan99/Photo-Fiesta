@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddServices = () => {
     const handleAddService = event => {
@@ -28,7 +30,7 @@ const AddServices = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    alert('Service placed successfully');
+                    toast.success('Service placed successfully');
                     form.reset();
                 }
             })
