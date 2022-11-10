@@ -13,7 +13,7 @@ const EditProduct = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${id}`)
+        fetch(`https://photo-fiesta-server.vercel.app/reviews/${id}`)
             .then(res => res.json())
             .then(data => {
                 setReview(data)
@@ -32,7 +32,7 @@ const EditProduct = () => {
 
 
 
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://photo-fiesta-server.vercel.app/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

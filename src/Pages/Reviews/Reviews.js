@@ -13,7 +13,7 @@ const Reviews = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+        fetch(`https://photo-fiesta-server.vercel.app/reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('photo-token')}`
             }
@@ -25,7 +25,7 @@ const Reviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You sure you want to cancel this review?');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://photo-fiesta-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -41,7 +41,7 @@ const Reviews = () => {
     }
 
     // const handleUpdate = id => {
-    //     fetch(`http://localhost:5000/reviews/${id}`, {
+    //     fetch(`https://photo-fiesta-server.vercel.app/reviews/${id}`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'

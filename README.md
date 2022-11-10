@@ -1,5 +1,7 @@
 # Project Name: Photo Fiesta
 
+# Live Site Link: https://photo-fiesta.web.app/
+
 * Created Home Route
   * Added a navbar, slider,two extra options,3 services and footer
 * Created Blogs Route

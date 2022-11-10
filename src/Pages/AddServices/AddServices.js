@@ -23,7 +23,7 @@ const AddServices = () => {
             price,
             description
         }
-        fetch('http://localhost:5000/addService', {
+        fetch('https://photo-fiesta-server.vercel.app/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
