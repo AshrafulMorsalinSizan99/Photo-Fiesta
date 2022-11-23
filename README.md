@@ -17,6 +17,7 @@
 
 * Tailwind CSS
 * MongoDb
+* Javascript
 * Vanilla Css
 * Html
 * Express Js
