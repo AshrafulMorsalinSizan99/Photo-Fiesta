@@ -9,11 +9,11 @@ const ServiceDetails = () => {
     const { user } = useContext(AuthContext);
     const { _id, name, img, price, description } = useLoaderData();
     return (
-        <div className='service-details mb-3'>
-
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <h2 className='text-5xl text-blue-700 mb-2'>Service Section</h2>
-                <figure><img src={img} alt="" /></figure>
+        <div className=' mb-3'>
+            <h2 className='text-5xl text-blue-700 mb-2'>Service Section</h2>
+            <div className="card service-details card-compact w-96 bg-base-100 shadow-xl">
+                
+                <figure><img src={img} className='pic' alt="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>

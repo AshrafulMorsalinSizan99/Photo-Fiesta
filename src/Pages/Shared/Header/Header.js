@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -27,7 +28,7 @@ const Header = () => {
         <span className='mt-3'>{user?.displayName}</span>
     </>
     return (
-        <div className="navbar h-20 mb-12 bg-base-100">
+        <div className="navbar header1 h-20 mb-12 bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
